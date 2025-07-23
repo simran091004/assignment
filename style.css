@@ -1,0 +1,99 @@
+/* Reset & base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Skip to Content */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  z-index: 1000;
+}
+
+/* Navigation */
+nav {
+  background-color: #005580;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #0077b6;
+  border-radius: 5px;
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #005580;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Box model on images */
+img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #ccc;
+  padding: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Grid gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+/* nth-child example */
+.gallery-grid img:nth-child(odd) {
+  border-radius: 25px;
+}
+
+.gallery-grid img:nth-child(even) {
+  border-radius: 5px;
+}
